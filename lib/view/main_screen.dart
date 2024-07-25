@@ -1,5 +1,9 @@
 import 'package:bank_deisgn_flutterwebsite/custom_widget/appbar.dart';
+import 'package:bank_deisgn_flutterwebsite/view/empower_your_business_view/empower_your_business_screen.dart';
 import 'package:bank_deisgn_flutterwebsite/view/financial_view/financial_freedom_screen.dart';
+import 'package:bank_deisgn_flutterwebsite/view/real_stories_view/real_stories_screen.dart';
+import 'package:bank_deisgn_flutterwebsite/view/social_impact/social_impact_header.dart';
+import 'package:bank_deisgn_flutterwebsite/view/social_impact/social_impact_screen.dart';
 import 'package:bank_deisgn_flutterwebsite/view/unlock_view/unlock_your_business_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -11,7 +15,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: Colors.grey.shade200,
       appBar: IsResponsive.isWebScreen(context)?CustomAppBar.webAppBar():CustomAppBar.mobileAppBar(),
    endDrawer: IsResponsive.isWebScreen(context)?null:CustomDrawer.drawer(),
 body: Row(
@@ -24,18 +28,15 @@ body: Row(
         children: [
         UnlockYourBusinessScreen(),
         FinancialFreedomScreen(),
+     EmpowerYourBusinessScreen(),
+        SocialImpactScreen(),
+          RealStoriesScreen(),
           Container(
+            color: Colors.yellow,
             width:MediaQuery.sizeOf(context).width,
             height:MediaQuery.sizeOf(context).height,
           ),
-          Container(
-            width:MediaQuery.sizeOf(context).width,
-            height:MediaQuery.sizeOf(context).height,
-          ),
-          Container(
-            width:MediaQuery.sizeOf(context).width,
-            height:MediaQuery.sizeOf(context).height,
-          ),
+
 
 
 
