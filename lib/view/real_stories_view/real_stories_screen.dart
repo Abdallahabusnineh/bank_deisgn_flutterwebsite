@@ -14,39 +14,7 @@ class RealStoriesScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
       child: Column(
         children: [
-          Row(
-            children: [
-              Text(
-                'Real Stories, Real Results',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
-              ),
-              Spacer(),
-              IsResponsive.isWebScreen(context)
-                  ? TextButton(
-                      onPressed: () {},
-                      child: Text.rich(
-                          TextSpan(text: 'View All Success Stories', children: [
-                        WidgetSpan(
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                          child: Icon(
-                            Icons.arrow_forward,
-                            size: 12.sp,
-                          ),
-                        ),
-                      ])),
-                      style: TextButton.styleFrom(
-                          foregroundColor: Colors.black,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.sp),
-                              side: BorderSide(
-                                  color: Colors.greenAccent.shade400)),
-                          backgroundColor: Colors.white),
-                    )
-                  : SizedBox()
-            ],
-          ),
+
           SizedBox(
             height: 3.h,
           ),

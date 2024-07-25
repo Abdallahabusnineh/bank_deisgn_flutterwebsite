@@ -64,7 +64,7 @@ class UnlockBody extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(child: Image(image: AssetImage('assets/img.png'))),
+              Expanded(child: Image(image: AssetImage('assets/busniess_women.jpeg'))),
               Expanded(child: Container(
                 padding: EdgeInsets.all(5.w),
                 child: Column(
@@ -121,8 +121,9 @@ class UnlockBody extends StatelessWidget {
                 ),)),
             ],
           ),
-        ):Expanded(child: Padding(
-
+        ):
+        
+        Expanded(child: Padding(
           padding:  EdgeInsets.symmetric(horizontal: 5.w),
           child: Column(
             children: [
@@ -149,7 +150,7 @@ class UnlockBody extends StatelessWidget {
               Column(
                 children: [
                   Row(
-                    //mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(child: CircleAvatar(radius: 8.sp,backgroundColor: Colors.greenAccent.shade400),),
                       SizedBox(width: 3.w,),
@@ -159,7 +160,7 @@ class UnlockBody extends StatelessWidget {
                   ),
                   SizedBox(height: 2.h,),
                   Row(
-                    // mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(child: CircleAvatar(radius: 8.sp,backgroundColor: Colors.greenAccent.shade400),),
                       SizedBox(width: 3.w,),
@@ -170,7 +171,7 @@ class UnlockBody extends StatelessWidget {
                   ),
                   SizedBox(height: 2.h,),
                   Row(
-                    //mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(child: CircleAvatar(radius: 8.sp,backgroundColor: Colors.greenAccent.shade400),),
                       SizedBox(width: 3.w,),
@@ -204,7 +205,7 @@ Expanded(
 
     decoration: BoxDecoration(
 
-      image: DecorationImage(image: AssetImage('assets/img.png')),
+      image: DecorationImage(image: AssetImage('assets/busniess_women.jpeg')),
       borderRadius: BorderRadius.circular(10.sp),
 
 
