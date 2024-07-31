@@ -3,33 +3,34 @@ import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ThreeStepsHeader extends StatelessWidget {
-  const ThreeStepsHeader({super.key});
+  const ThreeStepsHeader({super.key, required this.title, required this.underlineTitleText, required this.completeTitle});
+  final String title,underlineTitleText,completeTitle;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-     crossAxisAlignment: CrossAxisAlignment.center,
-     children: [
-       FittedBox(
-         child: Text.rich(
+    return FittedBox(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+       crossAxisAlignment: CrossAxisAlignment.center,
+       children: [
+         Text.rich(
            style: TextStyle(fontSize: IsResponsive.isWebScreen(context)?20.sp:18.sp,fontWeight: FontWeight.bold),
              TextSpan(
-             text: 'Three ',
+             text: title,
              children: [
                TextSpan(
-                 text: 'Steps ',
+                 text: underlineTitleText,
                  style: TextStyle(
                    color: Colors.greenAccent.shade400,
                    decoration: TextDecoration.underline,
                    decorationColor: Colors.greenAccent.shade400,
                  ),
              ),
-               TextSpan(text: 'to Funding Your Future')
+               TextSpan(text: completeTitle)
              ]
-             )),
-       )
-     ]
+             ))
+       ]
+      ),
     );
   }
 }

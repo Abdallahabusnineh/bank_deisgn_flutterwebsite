@@ -16,8 +16,6 @@ static BuildContext context=Get.context!;
       elevationThumb: 10.w,
       borderRadius: BorderRadius.circular(10.sp),
       height: 8.h,
-
-      width: IsResponsive.isWebScreen(context)?MediaQuery.sizeOf(context).width*0.2:MediaQuery.sizeOf(context).width*0.02,
       thumb: Icon(Icons.arrow_forward,color: Colors.black,),
       //trackPadding: EdgeInsets.all(5.sp),
       thumbPadding: EdgeInsets.all(5.sp),
@@ -26,7 +24,6 @@ static BuildContext context=Get.context!;
         style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-            fontSize: 16
 
         ),
       ),

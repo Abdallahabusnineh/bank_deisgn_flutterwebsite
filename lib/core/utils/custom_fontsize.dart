@@ -19,6 +19,6 @@ double getScaleFactor(context) {
   } else if (width < 900) {
     return width / 700;
   } else {
-    return width / 100;
+    return width / 1000;
   }
 }

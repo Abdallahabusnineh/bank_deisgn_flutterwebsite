@@ -90,7 +90,7 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.website" "\0"
-            VALUE "FileDescription", "bank_deisgn_flutterwebsite" "\0"
+            VALUE "FileUnlockFeaturesDescription", "bank_deisgn_flutterwebsite" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "bank_deisgn_flutterwebsite" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.website. All rights reserved." "\0"

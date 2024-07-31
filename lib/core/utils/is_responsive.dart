@@ -5,10 +5,10 @@ class IsResponsive {
     return MediaQuery.of(context).size.width <= 600;
   }
  static bool isTabletScreen(BuildContext context) {
-    return MediaQuery.of(context).size.width > 600&& MediaQuery.of(context).size.width<=800;
+    return MediaQuery.of(context).size.width > 600&& MediaQuery.of(context).size.width<=900;
   }
   static bool isWebScreen(BuildContext context) {
-    return MediaQuery.of(context).size.width > 800;
+    return MediaQuery.of(context).size.width > 900;
   }
 
 }

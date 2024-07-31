@@ -5,7 +5,7 @@ List<bool> FrequentlyAskedQuestionsisSelcted = [
   false,
   false
 ];
-final List<dynamic> AskedQuestionslabels = [
+final List<String> AskedQuestionslabels = [
   'General',
   'Payment',
   'Transaction',

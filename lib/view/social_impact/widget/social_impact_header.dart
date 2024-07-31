@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../core/utils/is_responsive.dart';
+import '../../../core/utils/is_responsive.dart';
 
 class SocialImpactHeader extends StatelessWidget {
-  const SocialImpactHeader({super.key});
-
+  const SocialImpactHeader({super.key, required this.hint, required this.title, required this.subtitle, required this.secHint, required this.rate, required this.firstIcon, required this.secIcon, required this.underlineTitle});
+final String hint,title,subtitle,secHint,rate,underlineTitle;
+final IconData firstIcon,secIcon;
   @override
   Widget build(BuildContext context) {
     return IsResponsive.isWebScreen(context) ?Row(
@@ -17,21 +18,23 @@ class SocialImpactHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Empowering Communities',
+                hint,
                 style: TextStyle(
                     color: Colors.grey.shade600,
                     fontWeight: FontWeight.w600,
-                    fontSize:
-                        IsResponsive.isWebScreen(context) ? 13.sp : 13.sp),
-              ),
+              fontSize: 15
+                            ),),
               Text.rich(
                 TextSpan(
-                    text: 'Our Positive ',
+                    text: title,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20.sp),
+                        fontWeight: FontWeight.bold,
+               fontSize:   17.sp
+
+                    ),
                     children: [
                       TextSpan(
-                          text: 'Social Impact',
+                          text: underlineTitle,
                           style: TextStyle(
                               color: Colors.greenAccent.shade400,
                               decoration: TextDecoration.underline,
@@ -39,8 +42,8 @@ class SocialImpactHeader extends StatelessWidget {
                     ]),
               ),
               Text(
-                'Our lending solutions are desinged to help business achieve thier goals and drive economic growth in their local area. ',
-                style: TextStyle(color: Colors.black, fontSize: 12.sp),
+                subtitle,
+                style: TextStyle(color: Colors.black),
               ),
             ],
           ),
@@ -56,43 +59,28 @@ class SocialImpactHeader extends StatelessWidget {
               Row(
                 children: [
                   Icon(
-                    Icons.star,
+                    firstIcon,
                     color: Colors.greenAccent.shade400,
                   ),
                   Text(
-                    'Trustpilot',
+                    secHint,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 15.sp),
+                        fontWeight: FontWeight.bold),
                   )
                 ],
               ),
               Row(
                 children: [
-                  Icon(
-                    Icons.stars_rounded,
-                    color: Colors.greenAccent.shade400,
-                  ),
-                  Icon(
-                    Icons.stars_rounded,
-                    color: Colors.greenAccent.shade400,
-                  ),
-                  Icon(
-                    Icons.stars_rounded,
-                    color: Colors.greenAccent.shade400,
-                  ),
-                  Icon(
-                    Icons.stars_rounded,
-                    color: Colors.greenAccent.shade400,
-                  ),
-                  Icon(
-                    Icons.stars_rounded,
+                 for (int i = 0; i < 5; i++)
+                   Icon(
+                    secIcon,
                     color: Colors.greenAccent.shade400,
                   ),
                 ],
               ),
               Text(
-                'TrustScore 5.0|3,724 reviews',
-                style: TextStyle(color: Colors.black, fontSize: 9.sp,fontWeight: FontWeight.bold),
+                rate,
+                style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
               )
             ],
           ),

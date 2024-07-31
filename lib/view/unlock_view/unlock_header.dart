@@ -25,6 +25,7 @@ class Header extends StatelessWidget {
              Icon(Icons.business,color: Colors.greenAccent.shade400,size: 25.sp,),
              ],
                     ),
+
                     Text('Potential with Xenon Bank',style: TextStyle(color: Colors.white,fontSize: 25.sp),),
                   ],
              ),
